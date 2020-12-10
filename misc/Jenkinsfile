@@ -27,8 +27,12 @@ node {
 
     // sh 'ls .lighthouseci'
 
-    reportFileName = sh (
-        basename $(find .lighthouseci -name "*html" -type f -exec ls {} \;)
+    // reportFileName = sh (
+    //     basename $(find .lighthouseci -name "*html" -type f -exec ls {} \;)
+    // ).trim()
+
+     reportFileName = sh (
+        echo hello
     ).trim()
 
     println reportFileName
