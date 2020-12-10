@@ -19,8 +19,6 @@ node {
   // }
 
   stage('generate lh report') {
-    sh 'npx lhci autorun'
-
     sh 'docker pull browserless/chrome'
 
     docker.image('browserless/chrome').inside() {
