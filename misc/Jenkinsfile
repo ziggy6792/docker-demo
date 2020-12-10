@@ -32,7 +32,7 @@ node {
     // ).trim()
 
     report_file_name = sh (
-      script: 'basename $(find .lighthouseci -name \"*html\" -type f -exec ls {} \;)',
+      script: 'basename $(find .lighthouseci -name *html -type f -exec ls {} \;)',
       returnStdout: true
     ).trim()
 
