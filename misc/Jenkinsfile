@@ -24,5 +24,17 @@ node {
     docker.image('browserless/chrome').inside('-v ${pwd}:/var/nextgen-web-monorep') {
       sh 'npx lhci autorun'
     }
+
+    sh 'ls .lighthouseci'
+
+  // publishHTML ('' : [
+  //   allowMissing: false,
+  //   alwaysLinkToLastBuild: true,
+  //   keepAll: true,
+  //   reportDir: '.lighthouseci',
+  //   reportFiles: 'myreport.html',
+  //   reportName: 'My Reports',
+  //   reportTitles: 'The Report'
+  // ])
   }
 }
