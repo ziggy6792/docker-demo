@@ -38,12 +38,12 @@ node {
 
     println report_file_name
 
-    publishHTML ('' : [
+    publishHTML (target:[
       allowMissing: false,
       alwaysLinkToLastBuild: true,
       keepAll: true,
       reportDir: '.lighthouseci',
-      reportFiles: report_file_name,
+      reportFiles: "${report_file_name},
       reportName: 'My Reports',
     ])
   }
