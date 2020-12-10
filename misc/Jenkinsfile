@@ -31,11 +31,12 @@ node {
     //     basename $(find .lighthouseci -name "*html" -type f -exec ls {} \;)
     // ).trim()
 
-     reportFileName = sh (
-        echo hello
+    report_file_name = sh (
+      script: 'echo hello',
+      returnStdout: true
     ).trim()
 
-    println reportFileName
+    println report_file_name
 
     publishHTML ('' : [
       allowMissing: false,
