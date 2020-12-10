@@ -25,16 +25,22 @@ node {
       sh 'npx lhci autorun'
     }
 
-    sh 'ls .lighthouseci'
+    // sh 'ls .lighthouseci'
 
-  // publishHTML ('' : [
-  //   allowMissing: false,
-  //   alwaysLinkToLastBuild: true,
-  //   keepAll: true,
-  //   reportDir: '.lighthouseci',
-  //   reportFiles: 'myreport.html',
-  //   reportName: 'My Reports',
-  //   reportTitles: 'The Report'
-  // ])
+    reportFileName = sh (
+        basename $(find .lighthouseci -name "*html" -type f -exec ls {} \;)
+    ).trim()
+
+    println reportFileName
+
+    publishHTML ('' : [
+      allowMissing: false,
+      alwaysLinkToLastBuild: true,
+      keepAll: true,
+      reportDir: '.lighthouseci',
+      reportFiles: 'myreport.html',
+      reportName: 'My Reports',
+      reportTitles: 'The Report'
+    ])
   }
 }

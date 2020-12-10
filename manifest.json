@@ -1,0 +1,15 @@
+[
+  {
+    "url": "https://www.google.com/?gws_rd=ssl",
+    "isRepresentativeRun": true,
+    "htmlPath": "/Users/sive/Documents/Training/Jenkins/docker-demo/report.html\"",
+    "jsonPath": "/Users/sive/Documents/Training/Jenkins/docker-demo/report.json\"",
+    "summary": {
+      "performance": 0.82,
+      "accessibility": 0.88,
+      "best-practices": 0.79,
+      "seo": 0.83,
+      "pwa": 0.46
+    }
+  }
+]

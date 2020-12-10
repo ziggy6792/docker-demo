@@ -6,9 +6,11 @@ module.exports = {
       settings: {
         'chrome-flags': '--no-sandbox --headless',
       },
+      numberOfRuns: 1,
     },
     upload: {
-      target: 'temporary-public-storage',
+      target: 'filesystem',
+      // reportFilenamePattern: 'report.%%EXTENSION%%"',
     },
   },
 };
