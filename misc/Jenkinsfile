@@ -22,7 +22,7 @@ node {
     sh 'docker pull browserless/chrome'
 
     docker.image('browserless/chrome').inside('-v ${pwd}:/var/nextgen-web-monorep') {
-      sh 'ls'
+      sh 'npx lhci autorun'
     }
   }
 }
