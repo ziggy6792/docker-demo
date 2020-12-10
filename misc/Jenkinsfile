@@ -32,20 +32,20 @@ node {
     // ).trim()
 
     report_file_name = sh (
-      script: 'echo hello',
+      script: 'basename $(find .lighthouseci -name \"*html\" -type f -exec ls {} \;)',
       returnStdout: true
     ).trim()
 
     println report_file_name
 
-    publishHTML ('' : [
-      allowMissing: false,
-      alwaysLinkToLastBuild: true,
-      keepAll: true,
-      reportDir: '.lighthouseci',
-      reportFiles: 'myreport.html',
-      reportName: 'My Reports',
-      reportTitles: 'The Report'
-    ])
+    // publishHTML ('' : [
+    //   allowMissing: false,
+    //   alwaysLinkToLastBuild: true,
+    //   keepAll: true,
+    //   reportDir: '.lighthouseci',
+    //   reportFiles: 'myreport.html',
+    //   reportName: 'My Reports',
+    //   reportTitles: 'The Report'
+    // ])
   }
 }
