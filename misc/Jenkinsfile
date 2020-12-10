@@ -21,8 +21,10 @@ node {
   stage('generate lh report') {
     sh 'docker pull browserless/chrome'
 
-    docker.image('browserless/chrome').inside() {
-      sh 'echo hello'
-    }
+    sh 'echo $HOME'
+
+    // docker.image('browserless/chrome').inside() {
+    //   sh 'echo hello'
+    // }
   }
 }
