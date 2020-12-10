@@ -44,7 +44,7 @@ node {
       keepAll: true,
       reportDir: '.lighthouseci',
       reportFiles: "${report_file_name}",
-      reportName: 'My Reports',
+      reportName: 'Lighthouse Report',
     ])
   }
 }
