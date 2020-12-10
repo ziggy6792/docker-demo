@@ -38,14 +38,14 @@ node {
 
     println report_file_name
 
-    // publishHTML ('' : [
-    //   allowMissing: false,
-    //   alwaysLinkToLastBuild: true,
-    //   keepAll: true,
-    //   reportDir: '.lighthouseci',
-    //   reportFiles: 'myreport.html',
-    //   reportName: 'My Reports',
-    //   reportTitles: 'The Report'
-    // ])
+    publishHTML ('' : [
+      allowMissing: false,
+      alwaysLinkToLastBuild: true,
+      keepAll: true,
+      reportDir: '.lighthouseci',
+      reportFiles: report_file_name,
+      reportName: 'My Reports',
+      reportTitles: 'The Report'
+    ])
   }
 }
