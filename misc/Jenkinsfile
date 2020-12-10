@@ -45,7 +45,6 @@ node {
       reportDir: '.lighthouseci',
       reportFiles: report_file_name,
       reportName: 'My Reports',
-      reportTitles: 'The Report'
     ])
   }
 }
