@@ -21,10 +21,8 @@ node {
   stage('generate lh report') {
     sh 'docker pull browserless/chrome'
 
-    sh 'pwd'
-
-    // docker.image('browserless/chrome').inside() {
-    //   sh 'echo hello'
-    // }
+    docker.image('browserless/chrome').inside('-v ${pwd}:/var/nextgen-web-monorep') {
+      sh 'ls'
+    }
   }
 }
